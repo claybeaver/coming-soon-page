@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f0e1;
+    color: #12335d;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    flex: 0 0 auto;
+}
+
+.image-container img {
+    width: 40%;
+    max-width: 480px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-container {
+    text-align: center;
+    padding: 0;
+    background-color: #f8f0e1;
+    margin-top: 1px;
+    clear: both;
+    flex: 0 0 auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    color: #0e2f5a !important;
+    line-height: 1;
+}
+
+h1 .main-text {
+    display: block;
+}
+
+h1 .sub-text {
+    display: block;
+    margin-top: -30px;
+}
+
+@media (max-width: 768px) {
+    body {
+        height: 100vh;
+        justify-content: center;
+        overflow: auto;
+        scroll-snap-type: y mandatory;
+        scroll-padding: 1px;
+    }
+    .content-wrapper {
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: center;
+        max-height: 80vh;
+        min-height: 0;
+    }
+    .image-container {
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .text-container {
+        flex: 0 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        padding: 0;
+    }
+    h1 {
+        font-size: 2rem;
+        line-height: 1;
+    }
+    h1 .main-text {
+        display: block;
+        font-size: 2rem;
+    }
+    h1 .sub-text {
+        display: block;
+        font-size: 2rem;
+        margin-top: -25px;
+    }
+    .image-container img {
+        width: 60%;
+        max-width: 350px;
+    }
+}
